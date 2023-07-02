@@ -1,0 +1,10 @@
+.tipButton {
+  background-color: green;
+  color: white;
+}
+
+.tipButton:hover,
+.tipButton_active {
+  color: green;
+  background-color: #c6e4e7;
+}
