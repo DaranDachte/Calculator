@@ -1,0 +1,13 @@
+.logoWrapper {
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: 590px) {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  @media (min-width: 590px) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}

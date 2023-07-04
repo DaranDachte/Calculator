@@ -1,5 +1,5 @@
 import React from "react";
-import "./TipButton.style.css";
+import styles from './styles.module.scss'
 
 type TipButtonType = {
   value: number;
@@ -7,14 +7,15 @@ type TipButtonType = {
   active: boolean;
 };
 
-export const TipButton: React.FunctionComponent<TipButtonType> = ({
+const TipButtonComponent: React.FunctionComponent<TipButtonType> = ({
   value,
   onClick,
   active,
 }) => {
-  const classNames = ["tipButton"];
+
+  const classNames = [styles.tipButton];
   if (active) {
-    classNames.push("tipButton_active");
+    classNames.push(styles.tipButton_active);
   }
   return (
     <button className={classNames.join(" ")} onClick={() => onClick(value)}>
@@ -22,3 +23,5 @@ export const TipButton: React.FunctionComponent<TipButtonType> = ({
     </button>
   );
 };
+
+export const TipButton = React.memo(TipButtonComponent)

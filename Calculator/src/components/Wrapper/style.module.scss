@@ -1,0 +1,42 @@
+.wrapper {
+  display: grid;
+  padding: 24px;
+  border-radius: 16px;
+  background-color: whitesmoke;
+
+  @media (max-width: 590px) {
+    width: 100%;
+    gap: 30px;
+  }
+  @media (min-width: 590px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    width: 570px;
+    margin: auto;
+  }
+
+  &_section {
+    display: grid;
+
+    @media (max-width: 590px) {
+      grid-gap: 24px;
+    }
+    @media (min-width: 590px) {
+      grid-gap: 16px;
+    }
+  }
+}
+
+.tipsPanel {
+
+  p {
+    margin: 0 0 4px;
+    color: #5a6f6f;
+  }
+
+  &_buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 8px;
+  }
+}
