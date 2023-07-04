@@ -1,0 +1,28 @@
+.greenDisplay {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 5px;
+  background-color: #06474b;
+  padding: 1rem;
+}
+
+.displayWiever_title {
+  color: whitesmoke;
+}
+
+.displayWiever_value {
+  color: #33c2ae;
+}
+
+.displayWiever {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttonReset {
+  background-color: #33c2ae;
+  color: #06474b;
+  border: none;
+  border-radius: 5px;
+}
