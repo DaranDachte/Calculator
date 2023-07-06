@@ -7,7 +7,7 @@ type TipButtonType = {
   active: boolean;
 };
 
-export const TipButton: React.FunctionComponent<TipButtonType> = ({
+const TipButtonComponent: React.FunctionComponent<TipButtonType> = ({
   value,
   onClick,
   active,
@@ -22,3 +22,5 @@ export const TipButton: React.FunctionComponent<TipButtonType> = ({
     </button>
   );
 };
+
+export const TipButton = React.memo(TipButtonComponent);

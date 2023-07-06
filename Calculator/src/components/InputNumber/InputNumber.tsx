@@ -14,8 +14,8 @@ export const InputNumber: React.FunctionComponent<InputNumberType> = ({
   icon,
   OnSubmit,
 }) => {
-  const SubmitHandler = (e) => {
-    OnSubmit(Number(e.target?.value));
+  const SubmitHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+    OnSubmit(Number(e.target.value));
   };
 
   return (
@@ -23,7 +23,7 @@ export const InputNumber: React.FunctionComponent<InputNumberType> = ({
       <span>{title}</span>
       <div className="inputNumber_wrapper">
         {icon}
-        <input type="number" value={value} onInput={SubmitHandler} />
+        <input type="number" value={value.toString()} onInput={SubmitHandler} />
       </div>
     </label>
   );
