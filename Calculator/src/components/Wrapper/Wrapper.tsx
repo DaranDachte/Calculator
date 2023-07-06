@@ -3,6 +3,7 @@ import "./Wrapper.style.css";
 import { InputNumber } from "../InputNumber/InputNumber";
 import { TipButton } from "../TipButton/TipButton";
 import { GreenDisplay } from "../GreenDisplay/GreenDisplay";
+import { CustomInput } from "../CustomInput/CustomInput";
 
 import { ReactComponent as DollarIcon } from "../../assets/img/DollarImg.svg";
 import { ReactComponent as PeopleIcon } from "../../assets/img/PeopleImg.svg";
@@ -13,10 +14,12 @@ export const Wrapper = () => {
   const [bill, setBill] = useState<number>(0);
   const [people, setPeople] = useState<number>(1);
   const [tip, setTip] = useState<number>(5);
+  const [useCustom, setUseCustom] = useState<boolean>(false);
 
   const { totalCounter, personTipCounter } = useMemo(() => {
     const totalCounter = Math.round(bill + (tip / 100) * bill) / people;
     const personTipCounter = (tip / 100) * totalCounter;
+
     return {
       totalCounter: totalCounter.toFixed(2),
       personTipCounter: personTipCounter.toFixed(2),
@@ -28,12 +31,13 @@ export const Wrapper = () => {
     setPeople(1);
   };
 
-  console.clear();
-  console.log("Bill", bill);
-  console.log("People", people);
-  console.log("Tip", tip);
-  console.log("Counter", totalCounter);
-  console.log("PersonTipCounter", personTipCounter);
+  const customHandler = (value: number) => {
+    if (value < 1) return false;
+
+    if (useCustom === false) setUseCustom(true);
+    setTip(value);
+  };
+
   return (
     <div className="wrapper">
       <div>
@@ -45,21 +49,29 @@ export const Wrapper = () => {
         />
         <div>
           <p>Select Tip %</p>
+          <div className="tipAndCustom">
+            {TipArray.map((item, index) => (
+              <TipButton
+                key={index}
+                value={item}
+                onClick={(value: number) => setTip(value)}
+                active={tip === item}
+              />
+            ))}
 
-          {TipArray.map((item, index) => (
-            <TipButton
-              key={index}
-              value={item}
-              onClick={(value: number) => setTip(value)}
-              active={tip === item}
+            <CustomInput
+              value={useCustom ? tip : null}
+              OnInput={(value) => customHandler(value)}
             />
-          ))}
+          </div>
         </div>
+
         <InputNumber
           title={"Number of People"}
           value={people}
           OnSubmit={(value: number) => setPeople(value)}
           icon={<PeopleIcon />}
+          showError={true}
         />
       </div>
       <GreenDisplay

@@ -6,6 +6,7 @@ type InputNumberType = {
   title: string;
   icon: React.ReactNode;
   OnSubmit: (value: number) => void;
+  showError?: boolean;
 };
 
 export const InputNumber: React.FunctionComponent<InputNumberType> = ({
@@ -13,6 +14,7 @@ export const InputNumber: React.FunctionComponent<InputNumberType> = ({
   title,
   icon,
   OnSubmit,
+  showError = false,
 }) => {
   const SubmitHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     OnSubmit(Number(e.target.value));
@@ -21,6 +23,7 @@ export const InputNumber: React.FunctionComponent<InputNumberType> = ({
   return (
     <label className="inputNumber">
       <span>{title}</span>
+      {showError && value === 0 && <small className="zero">Cant be Zero</small>}
       <div className="inputNumber_wrapper">
         {icon}
         <input type="number" value={value.toString()} onInput={SubmitHandler} />
