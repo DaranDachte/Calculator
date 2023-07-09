@@ -1,9 +1,16 @@
 .inputNumber {
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.inputNumber small {
+  color: red;
 }
 
 .inputNumber_wrapper {
   display: flex;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   border: 1px grey solid;
