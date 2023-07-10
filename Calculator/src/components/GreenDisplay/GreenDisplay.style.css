@@ -25,4 +25,17 @@
   color: #06474b;
   border: none;
   border-radius: 5px;
+  height: 2rem;
+}
+
+.buttonReset_active {
+  background-color: #65979a;
+}
+
+.tipAmount {
+  margin-bottom: 1rem;
+}
+
+.small {
+  color: #65979a;
 }

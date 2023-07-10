@@ -10,8 +10,9 @@ input::-webkit-inner-spin-button {
   grid-template-columns: repeat(2, 1fr);
   margin: auto;
   background-color: whitesmoke;
-  width: 1100px;
-  border-radius: 3rem;
+  width: 45rem;
+  height: 20rem;
+  border-radius: 10px;
   padding: 1rem;
 }
 

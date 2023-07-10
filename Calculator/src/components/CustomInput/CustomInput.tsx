@@ -18,6 +18,7 @@ export const CustomInput: React.FunctionComponent<Props> = ({
   return (
     <label>
       <input
+        className="customInput"
         type="number"
         value={value ? value.toString() : ""}
         placeholder={placeholder}

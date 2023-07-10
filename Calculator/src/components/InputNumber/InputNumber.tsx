@@ -25,8 +25,14 @@ export const InputNumber: React.FunctionComponent<InputNumberType> = ({
       <span>{title}</span>
       {showError && value === 0 && <small className="zero">Cant be Zero</small>}
       <div className="inputNumber_wrapper">
-        {icon}
-        <input type="number" value={value.toString()} onInput={SubmitHandler} />
+        <div>{icon}</div>
+        <div>
+          <input
+            type="number"
+            value={value.toString()}
+            onInput={SubmitHandler}
+          />
+        </div>
       </div>
     </label>
   );
