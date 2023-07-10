@@ -1,6 +1,8 @@
 .tipButton {
   background-color: green;
   color: white;
+  border-radius: 5px;
+  border: none;
 }
 
 .tipButton:hover,
