@@ -16,7 +16,7 @@ export const CustomInput: React.FunctionComponent<Props> = ({
     OnInput(Number(e.target.value));
   };
   return (
-    <label>
+    <label className="customLabel">
       <input
         className="customInput"
         type="number"

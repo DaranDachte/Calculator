@@ -5,30 +5,24 @@ type Props = {
   totalCounter: string;
   personTipCounter: string;
   onReset: () => void;
-  active: boolean;
+  active?: boolean;
 };
 
 export const GreenDisplay: React.FunctionComponent<Props> = ({
   onReset,
   totalCounter,
   personTipCounter,
-  active,
 }) => {
   const classNames = ["buttonReset"];
-  if (active) {
-    classNames.push("buttonReset_active");
-  }
+
   return (
     <div className="greenDisplay">
       <div>
         <div className="tipAmount">
           <DisplayWiever title={"Tip Amount"} value={personTipCounter} />
-
-          <small className="small">/ person</small>
         </div>
         <div>
           <DisplayWiever title={"Total"} value={totalCounter} />
-          <small className="small">/ person</small>
         </div>
       </div>
       <button className={classNames.join(" ")} onClick={onReset}>

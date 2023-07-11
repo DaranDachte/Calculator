@@ -29,6 +29,8 @@ export const Wrapper = () => {
   const onReset = () => {
     setBill(0);
     setPeople(1);
+    setUseCustom(false);
+    setTip(5);
   };
 
   const customHandler = (value: number) => {
@@ -40,7 +42,7 @@ export const Wrapper = () => {
 
   return (
     <div className="wrapper">
-      <div>
+      <div className="inputBillNumber">
         <InputNumber
           title={"Bill"}
           value={bill}

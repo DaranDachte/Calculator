@@ -13,6 +13,7 @@
 
 .displayWiever_value {
   color: #33c2ae;
+  font-size: 2rem;
 }
 
 .displayWiever {
@@ -28,8 +29,8 @@
   height: 2rem;
 }
 
-.buttonReset_active {
-  background-color: #65979a;
+.buttonReset:hover {
+  background-color: #a2e8df;
 }
 
 .tipAmount {

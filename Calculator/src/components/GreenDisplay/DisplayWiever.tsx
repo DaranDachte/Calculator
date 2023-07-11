@@ -8,8 +8,11 @@ type Props = {
 const DisplayWiever: React.FunctionComponent<Props> = ({ title, value }) => {
   return (
     <div className="displayWiever">
-      <div className="displayWiever_title">{title}</div>
-      <div className="displayWiever_value">{value}</div>
+      <div>
+        <div className="displayWiever_title"> {title}</div>
+        <small className="small">/ person</small>
+      </div>
+      <div className="displayWiever_value">${value}</div>
     </div>
   );
 };
