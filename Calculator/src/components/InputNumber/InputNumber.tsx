@@ -1,4 +1,4 @@
-import React, { FormEvent } from "react";
+import React from "react";
 
 import "./InputNumber.style.css";
 type InputNumberType = {

@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import { useState, useMemo } from "react";
 import "./Wrapper.style.css";
 import { InputNumber } from "../InputNumber/InputNumber";
 import { TipButton } from "../TipButton/TipButton";
@@ -50,7 +50,7 @@ export const Wrapper = () => {
           icon={<DollarIcon />}
         />
         <div>
-          <p>Select Tip %</p>
+          <p className="pClass">Select Tip %</p>
           <div className="tipAndCustom">
             {TipArray.map((item, index) => (
               <TipButton
