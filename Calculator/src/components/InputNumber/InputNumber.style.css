@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .inputNumber small {
@@ -9,9 +10,10 @@
 }
 
 .inputNumber_wrapper {
-  display: flex;
+  display: grid;
+  grid-template-columns: 24px auto;
   width: 100%;
-  justify-content: space-between;
+
   align-items: center;
   border: 1px grey solid;
   border-radius: 5px;
@@ -20,7 +22,9 @@
 }
 
 .inputNumber_wrapper input {
+  text-align: right;
   background: none;
   border: none;
   outline: none;
+  width: 100%;
 }
