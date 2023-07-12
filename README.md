@@ -1,8 +1,8 @@
 # Tip Calculator
 
-Have you dined at a restaurant and don't know how much tip each of you should pay? With the app Tip_Calculator you can easily and simply calculate the right amount.  Follow the link,  enter the required parameters  and get the answer. <a href="[https://calculator-jfch.vercel.app/](https://tip-calculator-lake-alpha.vercel.app/)" target="_blank">Tip Calculator</a>
+Have you dined at a restaurant and don't know how much tip each of you should pay? With the app Tip_Calculator you can easily and simply calculate the right amount.  Follow the link,  enter the required parameters  and get the answer. <a href="https://tip-calculator-lake-alpha.vercel.app/" target="_blank">Tip Calculator</a>
 
-To write this application, I used
+To write this application, I used:
 <ul>
  <li>TypeScript</li>
  <li>React</li>
