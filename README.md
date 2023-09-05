@@ -11,4 +11,5 @@ To write this application, I used:
 
 The design was borrowed from the online-service Figma.
 
-![logoColor](https://user-images.githubusercontent.com/96144068/234046629-d073245e-5596-4b09-8334-cf94d2beb69a.jpg)
+
+![Splitter](https://github.com/DaranDachte/Tip_Calculator/assets/96144068/94dbde38-650c-4854-a34a-5bbad70b3e9c)
