@@ -9,7 +9,6 @@ To write this application, I used:
  <li>Vite-plugin-svgr</li>
 </ul>
 
-The design was borrowed from the online-service Figma.
 
 
 ![Splitter](https://github.com/DaranDachte/Tip_Calculator/assets/96144068/94dbde38-650c-4854-a34a-5bbad70b3e9c)
